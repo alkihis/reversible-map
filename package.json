@@ -1,6 +1,6 @@
 {
   "name": "reversible-map",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A reversible map using classic JS Map",
   "main": "build/ReversibleMap.js",
   "scripts": {
