@@ -14,6 +14,13 @@ export default class ReversibleMap<K1, K2> {
     }
 
     set(k: K1 | K2, v: K1 | K2) {
+        if (this.has(k)) {
+            this.data.delete(this.get(k));
+        }
+        if (this.has(v)) {
+            this.data.delete(this.get(v));
+        }
+
         this.data.set(k, v);
         this.data.set(v, k);
     }

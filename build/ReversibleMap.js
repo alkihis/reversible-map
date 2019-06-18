@@ -13,6 +13,12 @@ class ReversibleMap {
         return this.data.get(k);
     }
     set(k, v) {
+        if (this.has(k)) {
+            this.data.delete(this.get(k));
+        }
+        if (this.has(v)) {
+            this.data.delete(this.get(v));
+        }
         this.data.set(k, v);
         this.data.set(v, k);
     }
